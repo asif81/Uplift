@@ -10,9 +10,11 @@ using Uplift.Models;
 using Microsoft.AspNetCore.Hosting;
 using Uplift.Models.ViewModels;
 using System.IO;
+using Microsoft.AspNetCore.Authorization;
 
 namespace Uplift.Areas.Admin.Controllers
 {
+    [Authorize]
     [Area("Admin")]
     public class ServiceController : Controller
     {

@@ -7,9 +7,11 @@ using Newtonsoft.Json;
 using Uplift.DataAccess.Data.Repository.IRepository;
 using Uplift.DataAccess.Data.Repository;
 using Uplift.Models;
+using Microsoft.AspNetCore.Authorization;
 
 namespace Uplift.Areas.Admin.Controllers
 {
+    [Authorize]
     [Area("Admin")]
     public class CategoryController : Controller
     {
