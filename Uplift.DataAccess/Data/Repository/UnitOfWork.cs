@@ -18,6 +18,7 @@ namespace Uplift.DataAccess.Data.Repository
             orderDetail = new OrderDetailRepository(applicationDbContext);
             orderHeader = new OrderHeaderRepository(applicationDbContext);
             user = new UserRepository(applicationDbContext);
+            sp_Call = new SP_Call(applicationDbContext);
         }
 
         public ICategoryRepository category { get; private set; }
@@ -25,7 +26,8 @@ namespace Uplift.DataAccess.Data.Repository
         public IServiceRepository service { get; private set; }
         public IOrderDetailRepository orderDetail { get; private set; }
         public IOrderHeaderRepository orderHeader { get; private set; }
-        public IUserRepository user { get; }
+        public IUserRepository user { get; private set; }
+        public ISP_Call sp_Call { get; private set; }
         public void Save()
         {
             _applicationDbContext.SaveChanges();
