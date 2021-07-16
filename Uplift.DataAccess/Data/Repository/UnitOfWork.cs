@@ -18,6 +18,7 @@ namespace Uplift.DataAccess.Data.Repository
             orderDetail = new OrderDetailRepository(applicationDbContext);
             orderHeader = new OrderHeaderRepository(applicationDbContext);
             user = new UserRepository(applicationDbContext);
+            webImage = new WebImageRepository(applicationDbContext);
             sp_Call = new SP_Call(applicationDbContext);
         }
 
@@ -27,6 +28,7 @@ namespace Uplift.DataAccess.Data.Repository
         public IOrderDetailRepository orderDetail { get; private set; }
         public IOrderHeaderRepository orderHeader { get; private set; }
         public IUserRepository user { get; private set; }
+        public IWebImageRepository webImage { get; private set; }
         public ISP_Call sp_Call { get; private set; }
         public void Save()
         {
